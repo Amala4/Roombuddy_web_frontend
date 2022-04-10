@@ -50,7 +50,7 @@ class AddRoom extends Component {
     };
 
     axios
-      .post('http://localhost:8082/api/Room_Details', data)
+      .post('https://roombuddy-app.herokuapp.com/api/Room_Details', data)
       .then(res => {
         this.setState({
       room_address_and_description: '',

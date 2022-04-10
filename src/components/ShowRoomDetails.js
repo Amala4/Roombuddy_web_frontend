@@ -19,7 +19,7 @@ class showRoomDetails extends Component {
   componentDidMount() {
     // console.log("Print id: " + this.props.match.params.id);
     axios
-      .get('http://localhost:8082/api/Room_Details/'+this.props.match.params.id)
+      .get('https://roombuddy-app.herokuapp.com/api/Room_Details/'+this.props.match.params.id)
       .then(res => {
         // console.log("Print-showRoomDetails-API-response: " + res.data);
         this.setState({
@@ -35,7 +35,7 @@ class showRoomDetails extends Component {
 
   onDeleteClick (id) {
     axios
-      .delete('http://localhost:8082/api/Room_Details/'+id)
+      .delete('https://roombuddy-app.herokuapp.com/api/Room_Details/'+id)
       .then(res => {
         this.props.history.push("/");
       })

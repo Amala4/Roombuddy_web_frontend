@@ -14,7 +14,7 @@ class ShowRoomList extends Component {
 
   componentDidMount() {
     axios
-      .get('http://localhost:8082/api/Room_Details')
+      .get('https://roombuddy-app.herokuapp.com/api/Room_Details')
       .then(res => {
         this.setState({
           room_array: res.data

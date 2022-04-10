@@ -27,7 +27,7 @@ class UpdateRoomInfo extends Component {
   componentDidMount() {
     // console.log("Print id: " + this.props.match.params.id);
     axios
-      .get('http://localhost:8082/api/Room_Details/'+this.props.match.params.id)
+      .get('https://roombuddy-app.herokuapp.com/api/Room_Details/'+this.props.match.params.id)
       .then(res => {
         // this.setState({...this.state, room: res.data})
         this.setState({
@@ -70,7 +70,7 @@ class UpdateRoomInfo extends Component {
     };
 
     axios
-      .put('http://localhost:8082/api/Room_Details/'+this.props.match.params.id, data)
+      .put('https://roombuddy-app.herokuapp.com/api/Room_Details/'+this.props.match.params.id, data)
       .then(res => {
         this.props.history.push('/show-room/'+this.props.match.params.id);
       })
